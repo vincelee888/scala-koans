@@ -24,13 +24,13 @@ class AboutConstructors extends KoanSuite {
 
   koan("val in class definition defines read only property") {
     val aboutMe = new AboutConstructorWithValParameter("MyName")
-    aboutMe.name should be(__)
+    aboutMe.name should be("MyName")
   }
 
   koan("var in class definition defines read/write parameters") {
     val aboutMe = new AboutConstructorWithVarParameter("MyName")
     aboutMe.name = "YourName"
-    aboutMe.name should be(__)
+    aboutMe.name should be("YourName")
   }
 
   koan("private member data is not accessible") {
